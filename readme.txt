@@ -54,3 +54,31 @@ git config --global user.email "470386285@qq.com"
 	用版本库里的版本替换工作区的版本 
 		$ git checkout -- fileName
 
+远程仓库：
+	创建SSH Key：
+		在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果已经有了，可直接跳到下一步。
+
+	$ ssh-keygen -t rsa -C "470386285@qq.com"
+
+	id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。
+	登陆GitHub：
+
+	打开“Account settings”，“SSH Keys”页面：
+
+然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容，点“Add Key”。
+
+添加远程库:
+	在右上角找到“Create a new repo”按钮，创建一个新的仓库。在Repository name填入learngit，其他保持默认设置，点击“Create repository”按钮，就成功地创建了一个新的Git仓库。
+	
+	在本地的git仓库下运行命令：
+
+	$ git remote add origin git@github.com:Hengerbean/git.git
+	$ git remote add origin git@server-name:path/repo-name.git
+	下一步，就可以把本地库的所有内容推送到远程库上：
+
+		$ git push -u origin master
+	从现在起，只要本地作了提交，就可以通过命令：
+
+	$ git push origin master
+
+	
