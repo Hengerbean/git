@@ -89,7 +89,68 @@ git config --global user.email "470386285@qq.com"
 
 	Git支持多种协议，包括https，但通过ssh支持的原生git协议速度最快。
 
-	
+分支管理：
+	创建与合并分支：
 
-
+		查看分支： $ git branch 
+		创建分支： $ git branch <name>
+		切换分支： $ git checkout <name>
+		创建+切换分支： $ git checkout -b <name>
+		合并某分支到当前分支：$ git merge <name>
+		删除分支： $ git branch -d <name>
 	
+	解决冲突：
+		当git无法自。动合并时，就必须首先解决冲突，在提交，合并完成。用 $ git log --graph  命令可以看到分支合并图。
+
+ 
+	分支管理策略：
+		
+		能查看分支合并历史：
+
+			$ git merge --no-ff -m "comment" <name>
+	Bug分支管理：
+		当手头的工作没有完成时，先把工作现场 $ git stash 一下，然后去修复Bug，修复后，再 $ git stash pop ,回到工作现场。
+		$ git stash		储存当前现场
+		$ git tash list	查看储存目录 
+		$ git tash apply stash@{0}	回复储存现场
+		$ git tash drop 	删除储存现场
+		$ git tash pop		回复并删除储存现场
+
+	Feature分支：
+		开发一个新Feature，最好新创建一个分支;
+		如果要丢弃一个没被合并的分支，通过 $ git branch -D <name>
+强行删除。
+	
+	多人协作：
+		
+		查看远程库的信息：$ git remote -v
+		本地新建的分支如果不推送，对其他人就不可见。
+		从本地推送分支，使用 $ git push origin branch-name ,如果推送失败，先用 git pull 抓取远程的新提交。
+		在本地创建和远程分支对应的分支，使用 $ git checkout -b branch-name origin/branch-name ,本地和远程分支的名称最好一致。
+		建立本地分支和远程分支的关联，使用 $ git branch --set -upstream orgin/branch-name
+		从远程库抓取使用 $ git pull,如果有冲突，先解决冲突。
+
+标签管理：
+	
+	创建标签：
+		$ git tag -a <tagname> -m "comment"	创建标签
+		$ git tag 	显示所有标签
+		$ git show <tagname> 显示标签信息
+
+	操作标签： 
+		$ git push origin <tagname>	推送一个本地标签
+		$ git push origin --tag	可以推送全部本地未推送的标签
+		$ git tag -d <tagname>	删除一个本地标签
+		$ git push origin :refs/tags/<tagname>	可以删除一个远程标签。
+
+Gitub:
+
+	在 github上，可以任意Fork开源仓库.
+	自己拥有Fork后的仓库读写权限。
+	可以推送pull request 给官方仓库来贡献代码.
+忽略特殊文件：
+	忽略默写文件时，需要编写 .gitignore;
+	.gitignore 文件本身要放到版本库中，并且可以对.gitignore作版本控制。
+
+		
+
