@@ -157,5 +157,16 @@ Gitub:
 	忽略默写文件时，需要编写 .gitignore;
 	.gitignore 文件本身要放到版本库中，并且可以对.gitignore作版本控制。
 
-		
+			REDIS
+
+	运行redis命令
+	redis-server /opt/local/etc/redis.conf
+
+	进入redis命令行
+	redis -cli
+	
+	关闭redis命令
+	redis -cli -h 127.0.0.1 -p 6379 shutdown
+
+	
 
