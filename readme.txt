@@ -168,5 +168,15 @@ Gitub:
 	关闭redis命令
 	redis -cli -h 127.0.0.1 -p 6379 shutdown
 
+
+		MONGODB
+
+	开启mongodb命令
+	mongostart
+
+	关闭mongodb命令
+	mongostop
+	
+
 	
 
