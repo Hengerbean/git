@@ -163,10 +163,10 @@ Gitub:
 	redis-server /opt/local/etc/redis.conf
 
 	进入redis命令行
-	redis -cli
+	redis-cli -h ip -p port
 	
 	关闭redis命令
-	redis -cli -h 127.0.0.1 -p 6379 shutdown
+	redis-cli -h 127.0.0.1 -p 6379 shutdown
 
 
 		MONGODB
