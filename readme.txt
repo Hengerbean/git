@@ -157,6 +157,15 @@ Gitub:
 	忽略默写文件时，需要编写 .gitignore;
 	.gitignore 文件本身要放到版本库中，并且可以对.gitignore作版本控制。
 
+
+处理冲突：
+	git status
+	
+	git add
+	
+	git commit
+
+
 			REDIS
 
 	运行redis命令
@@ -176,6 +185,7 @@ Gitub:
 
 	关闭mongodb命令
 	mongostop
+	
 	
 
 	
