@@ -161,7 +161,7 @@ Gitub:
 处理冲突：
 	git status
 	
-	git add
+	git add [file]
 	
 	git commit
 
