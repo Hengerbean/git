@@ -85,6 +85,8 @@ git config --global user.email "470386285@qq.com"
 	先创建github远程版本库：
 
 	$ git clone git@github.com:server_name/repo_name.git
+	$ git clone -b branch_name username@github.com:server_name/repo_name.git
+	
 	要克隆一个仓库，首先必须知道仓库的地址，然后使用git clone命令克隆。
 
 	Git支持多种协议，包括https，但通过ssh支持的原生git协议速度最快。
