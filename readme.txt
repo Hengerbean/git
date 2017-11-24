@@ -189,6 +189,7 @@ Gitub:
 	mongostop
 	
 	
+	netstat -nltp|grep 27000
 
 	
 
