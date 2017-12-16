@@ -167,6 +167,10 @@ Gitub:
 	
 	git commit
 
+合并其他版本的提交：
+	
+	git cherry-pick <commit id>
+        如果冲突就add 、 git commit -c <新的commit号码>
 
 			REDIS
 
