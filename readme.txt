@@ -191,5 +191,9 @@ Gitub:
 	
 	netstat -nltp|grep 27000
 
+压缩文件：
+	tar -zcvf；
+解压文件
+	tar -zxvf;
 	
 
